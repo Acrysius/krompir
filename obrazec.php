@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Krompirjevi oboževalci</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/x-con" href="images/potato.webp">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap');
-    </style>
+    <?php include 'includes/head.html';?>
 </head>
 <body>
 <?php include 'includes/navbar.html';?>
@@ -27,9 +20,26 @@
                     <label for="priimek" class="form-label">Priimek</label>
                     <input type="text" name="priimek" id="form-surname" class="form-control">
                 </div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <label for="naslov">Naslov</label>
+                        <input class="form-control" type="text" name="naslov" id="form-address">
+                    </div>
+                </div>
                 <div class="mb-3">
                     <label for="eposta" class="form-label">E-pošta</label>
                     <input type="email" name="eposta" id="form-email" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="vrsta" class="form-label">Vrsta krompirja</label>
+                    <select name="vrsta" id="form-vrsta" class="form-select" aria-label="Disabled select example">
+                        <option selected>Izberi vrsto krompirja</option>
+                        <option value="sladki">Sladki krompir</option>
+                        <option value="beli">Beli krompir</option>
+                        <option value="russet">Russet krompir</option>
+                        <option value="rumeni">Rumeni krompir</option>
+                        <option value="mladi">Mladi krompir</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="vsebina" class="form-label">Sporočilo</label>
