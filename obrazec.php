@@ -21,25 +21,40 @@
                     <input type="text" name="priimek" id="form-surname" class="form-control">
                 </div>
                 <div class="row mb-3">
-                    <div class="col">
+                    <div class="col-6">
                         <label for="naslov">Naslov</label>
                         <input class="form-control" type="text" name="naslov" id="form-address">
+                    </div>
+                    <div class="col-4">
+                        <label for="mesto">Mesto</label>
+                        <input class="form-control" type="text" name="mesto" id="form-city">
+                    </div>
+                    <div class="col-2">
+                        <label for="postna">Poštna številka</label>
+                        <input class="form-control" type="number" min="1000" max="9999" name="postna" id="form-post">
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="eposta" class="form-label">E-pošta</label>
                     <input type="email" name="eposta" id="form-email" class="form-control">
                 </div>
-                <div class="mb-3">
-                    <label for="vrsta" class="form-label">Vrsta krompirja</label>
-                    <select name="vrsta" id="form-vrsta" class="form-select" aria-label="Disabled select example">
-                        <option selected>Izberi vrsto krompirja</option>
-                        <option value="sladki">Sladki krompir</option>
-                        <option value="beli">Beli krompir</option>
-                        <option value="russet">Russet krompir</option>
-                        <option value="rumeni">Rumeni krompir</option>
-                        <option value="mladi">Mladi krompir</option>
-                    </select>
+                <div class="row mb-3">
+                    <div class="col-10">
+                        <label for="vrsta" class="form-label">Vrsta krompirja</label>
+                        <select name="vrsta" id="form-vrsta" class="form-select" aria-label="Disabled select example">
+                            <option selected disabled>Izberi vrsto krompirja</option>
+                            <option value="sladki">Sladki krompir</option>
+                            <option value="beli">Beli krompir</option>
+                            <option value="russet">Russet krompir</option>
+                            <option value="rumeni">Rumeni krompir</option>
+                            <option value="mladi">Mladi krompir</option>
+                        </select>
+                    </div>
+                    <div class="col-2">
+                        <label class="form-label" for="teza">Teža v KG</label>
+                        <input clasS="form-control" type="number" name="teza" id="form-weight" min="1" max="10">
+                    </div>
+                    
                 </div>
                 <div class="mb-3">
                     <label for="vsebina" class="form-label">Sporočilo</label>
