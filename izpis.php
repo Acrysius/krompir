@@ -9,7 +9,12 @@
 
    <section class="container-fluid bg-tertiary py-5">
         <article class="container text-center">
-            <img class="img-fluid" src="images/irish-tato.webp" alt="Krompir v vsej svojio veličini!">
+            <?php if($_SERVER['REQUEST_METHOD']==='POST'){
+                include 'includes/narocilo.php'; 
+            } else {
+                include 'includes/hitri_log.php';
+            }?>
+                
         </article>
         
         <div class="container text-center">

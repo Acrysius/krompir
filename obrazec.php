@@ -11,7 +11,7 @@
         <article class="container">
             <h1 class="text-center text-secondary fw-bold">NAROČI VREČO KROMPIRJA</h1>
             <hr>
-            <form class="container">
+            <form class="container" action="izpis.php" method="POST">
                 <div class="mb-3">
                     <label for="ime" class="form-label">Ime</label>
                     <input type="text" class="form-control" id="form-name" name="ime">
@@ -27,7 +27,7 @@
                     </div>
                     <div class="col-4">
                         <label for="mesto">Mesto</label>
-                        <input class="form-control" type="text" name="mesto" id="form-city">
+                        <input class="form-control" type="text" name="mesto" id="form-city" required>
                     </div>
                     <div class="col-2">
                         <label for="postna">Poštna številka</label>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-2">
                         <label class="form-label" for="teza">Teža v KG</label>
-                        <input clasS="form-control" type="number" name="teza" id="form-weight" min="1" max="10">
+                        <input class="form-control" type="number" name="teza" id="form-weight" min="1" max="10" required>
                     </div>
                     
                 </div>
@@ -65,13 +65,27 @@
                 </div>
             </form>
         </article>
+        <article class="container">
+            <h1 class="text-center text-secondary fw-bold">PODATKOMETER</h1>
+            <p class="fs-4">Podajte svoje podatke. Prisežemo, da jih bomo varno shranili.</p>
+            <hr>
+            <form class="container" action="izpis.php" method="GET">
+                <div class="mb-3">
+                    <label for="uporabnik" class="form-label">Uporabniško ime</label>
+                    <input type="text" name="uporabnik" id="form_username" class="form-control" required>
+                </div>
+                <div>
+                    <label for="geslo" class="form-label"></label>
+                    <input type="password" name="geslo" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" class="btn btn-success mb-3">Potrdi podatke</button>
+                </div>
+            </form>
+        </article>
         
    </section>
 
-   <footer class="container-fluid py-2 bg-success text-center text-light">
-        <h2>Dobra stara bajta navdušencev krompirja.</h2>
-        <a class="text-decoration-none" href="mailto:potato@spud.si">potato@spud.si</a>
-        <p>2024©</p>
-   </footer>
+   <?php include 'includes/footer.html';?>
 </body>
 </html>

@@ -35,10 +35,6 @@
         
    </section>
 
-   <footer class="container-fluid py-2 bg-success text-center text-light">
-        <h2>Dobra stara bajta navdušencev krompirja.</h2>
-        <a class="text-decoration-none" href="mailto:potato@spud.si">potato@spud.si</a>
-        <p>2024©</p>
-   </footer>
+   <?php include 'includes/footer.html';?>
 </body>
 </html>
