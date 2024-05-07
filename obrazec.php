@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Krompirjevi oboževalci</title>
+    <title>Naroči krompir</title>
     <?php include 'includes/head.html';?>
 </head>
 <body>
