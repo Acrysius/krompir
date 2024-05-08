@@ -7,6 +7,8 @@
 <body>
 <?php include 'includes/navbar.html';?>
 
+    <?php include 'includes/mysqli-insert.php';?>
+
    <section class="container-fluid bg-tertiary py-5">
         <article class="container text-center">
             <?php if($_SERVER['REQUEST_METHOD']==='POST'){

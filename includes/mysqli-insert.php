@@ -1,20 +1,27 @@
 <?php
+require 'mysql-connect.php';
 
 if($_SERVER['REQUEST_METHOD']==='POST'){
     if(isset($_POST['krompir'])){
         $ime = $_POST['ime'];
-        $priimek = $_POST['ime'];
-        $kraj = $_POST['ime'];
-        $hisna_st = $_POST['ime'];
-        $mesto = $_POST['ime'];
-        $postna = $_POST['ime'];
-        $vrsta = $_POST[''];
-        $teza = $_POST[''];
+        $priimek = $_POST['priimek'];
+        $kraj = $_POST['naslov'];
+        $hisna_st = $_POST['hisna-st'];
+        $mesto = $_POST['mesto'];
+        $postna = $_POST['postna'];
+        $vrsta = $_POST['vrsta'];
+        $teza = $_POST['teza'];
 
         $query_mesto = "INSERT INTO MESTO(mesto, postna_stevilka) 
         VALUES('$mesto','$postna')";
-        $query_naslov = "INSERT INTO NASLOV(kraj, hisna_st, TK_mesto)
-        VALUES()"
+        $conn->exec($query_mesto);
+
+
+        $last_id = $conn->lastInsertId();
+        $queryNaslov = "INSERT INTO NASLOV(kraj, hisna_st, TK_mesto) VALUES('$kraj','$hisna_st','$last_id')";
+        $conn->exec($queryNaslov);
+
+        $last_id = $conn->lastInsertId();
     }
     
 

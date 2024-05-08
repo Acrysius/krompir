@@ -6,7 +6,8 @@
 </head>
 <body>
 <?php include 'includes/navbar.html';?>
-<?php require 'includes/mysql-connect.php';?>
+
+
    <section class="container-fluid bg-tertiary py-5">
         <article class="container">
             <h1 class="text-center text-secondary fw-bold">NAROČI VREČO KROMPIRJA</h1>
@@ -65,7 +66,7 @@
                     <textarea name="vsebina" id="vsebina" rows="10" class="form-control"></textarea>
                 </div>
                 <div>
-                    <button type="submit" class="btn btn-success mb-3">Naroči krompir</button>
+                    <button type="submit" name="krompir" class="btn btn-success mb-3">Naroči krompir</button>
                 </div>
             </form>
         </article>
@@ -83,7 +84,7 @@
                     <input type="password" name="geslo" id="geslo" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" name="krompir" class="btn btn-success mb-3">Potrdi podatke</button>
+                    <button type="submit" class="btn btn-success mb-3">Potrdi podatke</button>
                 </div>
             </form>
         </article>

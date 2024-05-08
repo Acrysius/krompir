@@ -1,5 +1,5 @@
 <?php
-$streznik = "localhost";
+$streznik = "localhost:3307";
 $usn = "root";
 $geslo = "";
 $baza = "krompir";
