@@ -17,14 +17,9 @@
                 
         </article>
         
-        <div class="container text-center">
-            <hr>
-            <h1 class="text-secondary fw-bold">RADI IMAMO KROMPIR</h1>
-            <p class="fs-4">In to je vse kar je važno. Naj vas navduši Njegova škrobost!</p>
-    
-        </div>
+        
     </section>
 
-    <?php include 'includes/footer.html';?>
+
 </body>
 </html>

@@ -14,34 +14,38 @@
             <form class="container" action="izpis.php" method="POST">
                 <div class="mb-3">
                     <label for="ime" class="form-label">Ime</label>
-                    <input type="text" class="form-control" id="form-name" name="ime">
+                    <input type="text" class="form-control" id="ime" name="ime" required>
                 </div>
                 <div class="mb-3">
                     <label for="priimek" class="form-label">Priimek</label>
-                    <input type="text" name="priimek" id="form-surname" class="form-control">
+                    <input type="text" name="priimek" id="priimek" class="form-control" required>
                 </div>
                 <div class="row mb-3">
-                    <div class="col-6">
+                    <div class="col-5">
                         <label for="naslov">Naslov</label>
-                        <input class="form-control" type="text" name="naslov" id="form-address">
+                        <input class="form-control" type="text" name="naslov" id="naslov" required>
+                    </div>
+                    <div class="col-1">
+                        <label for="hisna-st">Hišna št.</label>
+                        <input class="form-control" type="text" name="hisna-st" id="hisna-st" required>
                     </div>
                     <div class="col-4">
                         <label for="mesto">Mesto</label>
-                        <input class="form-control" type="text" name="mesto" id="form-city" required>
+                        <input class="form-control" type="text" name="mesto" id="mesto" required>
                     </div>
                     <div class="col-2">
                         <label for="postna">Poštna številka</label>
-                        <input class="form-control" type="number" min="1000" max="9999" name="postna" id="form-post">
+                        <input class="form-control" type="number" min="1000" max="9999" name="postna" id="postna" required>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="eposta" class="form-label">E-pošta</label>
-                    <input type="email" name="eposta" id="form-email" class="form-control">
+                    <input type="email" name="eposta" id="eposta" class="form-control" required>
                 </div>
                 <div class="row mb-3">
                     <div class="col-10">
                         <label for="vrsta" class="form-label">Vrsta krompirja</label>
-                        <select name="vrsta" id="form-vrsta" class="form-select" aria-label="Disabled select example">
+                        <select name="vrsta" id="vrsta" class="form-select" aria-label="Disabled select example" required>
                             <option selected disabled>Izberi vrsto krompirja</option>
                             <option value="sladki">Sladki krompir</option>
                             <option value="beli">Beli krompir</option>
@@ -52,13 +56,13 @@
                     </div>
                     <div class="col-2">
                         <label class="form-label" for="teza">Teža v KG</label>
-                        <input class="form-control" type="number" name="teza" id="form-weight" min="1" max="10" required>
+                        <input class="form-control" type="number" name="teza" id="teza" min="1" max="10" required>
                     </div>
                     
                 </div>
                 <div class="mb-3">
                     <label for="vsebina" class="form-label">Sporočilo</label>
-                    <textarea name="vsebina" id="form-content" rows="10" class="form-control"></textarea>
+                    <textarea name="vsebina" id="vsebina" rows="10" class="form-control"></textarea>
                 </div>
                 <div>
                     <button type="submit" class="btn btn-success mb-3">Naroči krompir</button>
@@ -72,11 +76,11 @@
             <form class="container" action="izpis.php" method="GET">
                 <div class="mb-3">
                     <label for="uporabnik" class="form-label">Uporabniško ime</label>
-                    <input type="text" name="uporabnik" id="form_username" class="form-control" required>
+                    <input type="text" name="uporabnik" id="uporabnik" class="form-control" required>
                 </div>
                 <div>
                     <label for="geslo" class="form-label"></label>
-                    <input type="password" name="geslo" class="form-control" required>
+                    <input type="password" name="geslo" class="geslo" required>
                 </div>
                 <div class="mb-3">
                     <button type="submit" class="btn btn-success mb-3">Potrdi podatke</button>
