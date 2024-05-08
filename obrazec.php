@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php include 'includes/navbar.html';?>
-
+<?php require 'includes/mysql-connect.php';?>
    <section class="container-fluid bg-tertiary py-5">
         <article class="container">
             <h1 class="text-center text-secondary fw-bold">NAROČI VREČO KROMPIRJA</h1>
@@ -80,10 +80,10 @@
                 </div>
                 <div>
                     <label for="geslo" class="form-label"></label>
-                    <input type="password" name="geslo" class="geslo" required>
+                    <input type="password" name="geslo" id="geslo" class="form-control" required>
                 </div>
                 <div class="mb-3">
-                    <button type="submit" class="btn btn-success mb-3">Potrdi podatke</button>
+                    <button type="submit" name="krompir" class="btn btn-success mb-3">Potrdi podatke</button>
                 </div>
             </form>
         </article>
